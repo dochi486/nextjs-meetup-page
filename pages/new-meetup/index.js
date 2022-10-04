@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import Head from 'next/head';
 import NewMeetupForm from '../../components/meetups/NewMeetupForm';
 
 function NewMeetupPage() {
@@ -20,7 +21,18 @@ function NewMeetupPage() {
     router.push('/');
   }
 
-  return <NewMeetupForm onAddMeetup={addMeetupHandler} />;
+  return (
+    <>
+      <Head>
+        <title>새로운 밋업 추가하기</title>
+        <meta
+          name="description"
+          content="밋업을 만들어서 새로운 친구들을 사귀어보세요!"
+        />
+      </Head>
+      <NewMeetupForm onAddMeetup={addMeetupHandler} />
+    </>
+  );
 }
 
 export default NewMeetupPage;

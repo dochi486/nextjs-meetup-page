@@ -28,6 +28,7 @@ export async function getStaticProps() {
     props: {
       meetups: DUMMY_MEETUPS,
     },
+    revalidate: 10, //데이터 업데이트 빈도에 따라서 설정해주면 되는 숫자
   };
 }
 

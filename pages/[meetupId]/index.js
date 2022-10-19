@@ -37,6 +37,7 @@ export async function getStaticPaths() {
         meetupId: meetup._id.toString(),
       },
     })),
+
     //  [
     //   {
     //     params: {
